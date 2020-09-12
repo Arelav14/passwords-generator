@@ -54,11 +54,15 @@ class MainWindow(QMainWindow):
 			return choice_email, choice
 
 	def pushbutton(self):
+		try:
 			self.calls()
 			self.generate()
 			choice_email, choice = self.generate()
 			self.ui.textEdit.setText(choice)
 			self.ui.textEdit_2.setText(choice_email)
+		except:
+			self.ui.textEdit.setText('')
+			self.ui.textEdit_2.setText('Error!')
 
 	def pushbutton2(self):
 		try:
