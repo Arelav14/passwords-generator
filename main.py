@@ -20,53 +20,63 @@ class MainWindow(QMainWindow):
 	def pushbutton(self):
 		try:
 			length = int(self.ui.comboBox.currentText())
+			email_length = int(self.ui.comboBox_3.currentText())
 			letters = ''
+			email_letters = ''
 			if self.ui.checkBox.isChecked() == True:
-				box_a = string.punctuation
-				letters = letters + box_a
+				letters = letters + string.punctuation
 			if self.ui.checkBox_2.isChecked() == True:
-				box_b = string.digits
-				letters = letters + box_b
+				letters = letters + string.digits
+				email_letters = email_letters + string.digits
 			if self.ui.checkBox_3.isChecked() == True:
-				box_c = string.ascii_uppercase
-				letters = letters + box_c
+				letters = letters + string.ascii_uppercase
+				email_letters = email_letters + string.ascii_uppercase
 			if self.ui.checkBox_4.isChecked() == True:
-				box_d = string.ascii_lowercase
-				letters = letters + box_d
+				letters = letters + string.ascii_lowercase
+				email_letters = email_letters + string.ascii_lowercase
 			if self.ui.checkBox_5.isChecked() == True:
 				choice = ''.join(random.sample(letters, length))
+				choice_email = ''.join(random.sample(email_letters, email_length)) + '@gmail.com'
 			else:
 				choice = ''.join(random.choice(letters) for i in range(length))
+				choice_email = ''.join(random.choice(email_letters) for i in range(email_length)) + '@gmail.com'
 			self.ui.textEdit.setText(choice)
+			self.ui.textEdit_2.setText(choice_email)
 		except:
-			self.ui.textEdit.setText('Error! Please choose at least one chars option!')
+			self.ui.textEdit.setText('')
+			self.ui.textEdit_2.setText('Error!')
 	def pushbutton2(self):
 		try:
 			length = int(self.ui.comboBox.currentText())
+			email_length = int(self.ui.comboBox_3.currentText())
 			letters = ''
+			email_letters = ''
 			if self.ui.checkBox.isChecked() == True:
-				box_a = string.punctuation
-				letters = letters + box_a
+				letters = letters + string.punctuation
 			if self.ui.checkBox_2.isChecked() == True:
-				box_b = string.digits
-				letters = letters + box_b
+				letters = letters + string.digits
+				email_letters = email_letters + string.digits
 			if self.ui.checkBox_3.isChecked() == True:
-				box_c = string.ascii_uppercase
-				letters = letters + box_c
+				letters = letters + string.ascii_uppercase
+				email_letters = email_letters + string.ascii_uppercase
 			if self.ui.checkBox_4.isChecked() == True:
-				box_d = string.ascii_lowercase
-				letters = letters + box_d
+				letters = letters + string.ascii_lowercase
+				email_letters = email_letters + string.ascii_lowercase
 			passwords = int(self.ui.comboBox_2.currentText())
 			txt = open('passwords.txt', 'w')
 			for i in range(passwords):
 				if self.ui.checkBox_5.isChecked() == True:
 					choice = ''.join(random.sample(letters, length))
+					choice_email = ''.join(random.sample(email_letters, email_length)) + '@gmail.com'
 				else:
 					choice = ''.join(random.choice(letters) for i in range(length))
-				txt.writelines(choice + '\n')
-			self.ui.textEdit.setText("Done! Please check program's folder!")
+					choice_email = ''.join(random.choice(email_letters) for i in range(email_length)) + '@gmail.com'
+				txt.writelines('Account ' + str(i + 1) + ':\n' + choice_email + '\n' + choice + '\n\n')
+			self.ui.textEdit.setText('')
+			self.ui.textEdit_2.setText("Done! Please check program's folder!")
 		except:
-			self.ui.textEdit.setText('Error! Please choose at least one chars option!')
+			self.ui.TextEdit_2.setText("Error!")
+			self.ui.textEdit.setText('')
 
 application = QApplication([])
 MainWindow = MainWindow()
