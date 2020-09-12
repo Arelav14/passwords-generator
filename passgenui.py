@@ -299,7 +299,7 @@ class Ui_MainWindow(object):
         self.label.setText(_translate("MainWindow", "Password Length:"))
         self.label_2.setText(_translate("MainWindow", "Email name length:"))
         self.groupBox_2.setTitle(_translate("MainWindow", "Output"))
-        self.pushButton_2.setText(_translate("MainWindow", "Output to File"))
+        self.pushButton_2.setText(_translate("MainWindow", "Output to txt(Program's Folder)"))
         self.comboBox_2.setItemText(0, _translate("MainWindow", "1"))
         self.comboBox_2.setItemText(1, _translate("MainWindow", "2"))
         self.comboBox_2.setItemText(2, _translate("MainWindow", "3"))
