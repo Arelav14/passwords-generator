@@ -99,7 +99,7 @@ class Ui_MainWindow(object):
         self.textEdit_4.setSizeAdjustPolicy(QtWidgets.QAbstractScrollArea.AdjustIgnored)
         self.textEdit_4.setObjectName("textEdit_4")
         self.comboBox = QtWidgets.QComboBox(self.groupBox_2)
-        self.comboBox.setGeometry(QtCore.QRect(250, 12, 41, 21))
+        self.comboBox.setGeometry(QtCore.QRect(240, 12, 41, 21))
         self.comboBox.setObjectName("comboBox")
         self.comboBox.addItem("")
         self.comboBox.addItem("")
@@ -142,10 +142,10 @@ class Ui_MainWindow(object):
         self.comboBox.addItem("")
         self.comboBox.addItem("")
         self.label = QtWidgets.QLabel(self.groupBox_2)
-        self.label.setGeometry(QtCore.QRect(160, 12, 86, 21))
+        self.label.setGeometry(QtCore.QRect(150, 12, 86, 21))
         self.label.setObjectName("label")
         self.comboBox_3 = QtWidgets.QComboBox(self.groupBox_2)
-        self.comboBox_3.setGeometry(QtCore.QRect(100, 12, 39, 21))
+        self.comboBox_3.setGeometry(QtCore.QRect(98, 12, 39, 21))
         self.comboBox_3.setObjectName("comboBox_3")
         self.comboBox_3.addItem("")
         self.comboBox_3.addItem("")
@@ -178,7 +178,7 @@ class Ui_MainWindow(object):
         self.comboBox_3.addItem("")
         self.comboBox_3.addItem("")
         self.label_2 = QtWidgets.QLabel(self.groupBox_2)
-        self.label_2.setGeometry(QtCore.QRect(6, 14, 91, 16))
+        self.label_2.setGeometry(QtCore.QRect(8, 14, 87, 16))
         self.label_2.setObjectName("label_2")
         self.textEdit_2 = QtWidgets.QTextEdit(self.centralwidget)
         self.textEdit_2.setGeometry(QtCore.QRect(10, 20, 306, 21))
@@ -219,7 +219,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "Email/Passwords generator"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Generator"))
         self.textEdit.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -317,7 +317,7 @@ class Ui_MainWindow(object):
         self.comboBox_3.setItemText(27, _translate("MainWindow", "28"))
         self.comboBox_3.setItemText(28, _translate("MainWindow", "29"))
         self.comboBox_3.setItemText(29, _translate("MainWindow", "30"))
-        self.label_2.setText(_translate("MainWindow", "Email name length:"))
+        self.label_2.setText(_translate("MainWindow", "Username length:"))
         self.textEdit_2.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
